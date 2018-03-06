@@ -25,16 +25,16 @@ static const CGFloat titleHeight = 50;
     return self;
 }
 
-- (void)operation{
+- (void)operation:(NSString *)text{
     
-    [super operation];
+    [super operation:text];
     
-    [self addTitleView];
+    [self addTitleView:text];
 }
 
-- (void)addTitleView{
+- (void)addTitleView:(NSString *)text{
     self.titleLabel = [[UILabel alloc] init];
-    self.titleLabel.text = @"添加一个title视图";
+    self.titleLabel.text = [@"添加一个title视图" stringByAppendingString:text];
     self.titleLabel.backgroundColor = [UIColor yellowColor];
     [self.contentView addSubview:self.titleLabel];
 }

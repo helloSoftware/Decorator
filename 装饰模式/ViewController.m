@@ -45,6 +45,7 @@
         if (!componentA) {
             componentA = [[ConcreteComponentA alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"componentA"];
         }
+        [componentA operation:@"单独的A"];
         return componentA;
     
     }else if (indexPath.row == 1){
@@ -55,7 +56,7 @@
             decoratorA = [[ConcreteDecoratorA alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DecoratorA"];
             decoratorA.component = componentA;
         }
-
+        [decoratorA operation:@"添加头"];
         return decoratorA;
     }else if (indexPath.row == 2){
         
@@ -65,7 +66,7 @@
             decoratorB = [[ConcreteDecoratorB alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DecoratorB"];
             decoratorB.component = componentA;
         }
-        
+        [decoratorB operation:@"添加尾"];
         return decoratorB;
     }else if (indexPath.row == 3) {
         
@@ -73,6 +74,7 @@
         if (!componentB) {
             componentB = [[ConcreteComponentB alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"componentB"];
         }
+        [componentB operation:@"实例B"];
         return componentB;
         
     }else if (indexPath.row == 4){
@@ -83,7 +85,8 @@
             decoratorA = [[ConcreteDecoratorA alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DecoratorA"];
             decoratorA.component = componentB;
         }
-        
+        [decoratorA operation:@"添加头"];
+
         return decoratorA;
     }else if (indexPath.row == 5){
         
@@ -93,7 +96,8 @@
             decoratorB = [[ConcreteDecoratorB alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DecoratorB"];
             decoratorB.component = componentB;
         }
-        
+        [decoratorB operation:@"添加尾"];
+
         return decoratorB;
     }
     

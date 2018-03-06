@@ -10,6 +10,6 @@
 
 @protocol Component <NSObject>
 
-- (void)operation;
+- (void)operation:(NSString *)text;
 
 @end

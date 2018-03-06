@@ -13,15 +13,15 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.backgroundColor = [UIColor blueColor];
-        self.textLabel.text = @"this is ConcreteComponentBBBBBBBBBBBBBB";
-        [self operation];
     }
     return self;
 }
 
-- (void)operation{
+- (void)operation:(NSString *)text{
     
-    NSLog(@"this is B Component");
+    self.textLabel.text = [text stringByAppendingString:@"Bb"];
+    
+    NSLog(@"this is A Component");
 }
 
 @end

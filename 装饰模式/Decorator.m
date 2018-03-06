@@ -16,14 +16,13 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self operation];
     }
     return self;
 }
-- (void)operation{
+- (void)operation:(NSString *)text{
     
     NSLog(@"decorator operation");
-    [self.component operation];
+    [self.component operation:text];
 }
 
 - (void)setComponent:(id<Component>)component{

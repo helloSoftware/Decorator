@@ -37,17 +37,17 @@ static const CGFloat bottomHeight = 50;
     return self;
 }
 
-- (void)operation{
+- (void)operation:(NSString *)text{
     
-    [super operation];
+    [super operation:text];
     
-    [self addTitleView];
+    [self addTitleView:text];
 }
 
 
-- (void)addTitleView{
+- (void)addTitleView:(NSString *)text{
     self.bottomLabel = [[UILabel alloc] init];
-    self.bottomLabel.text = @"添加一个bottom视图";
+    self.bottomLabel.text = [@"添加一个bottom视图" stringByAppendingString:text];
     self.bottomLabel.backgroundColor = [UIColor greenColor];
     [self.contentView addSubview:self.bottomLabel];
 }
