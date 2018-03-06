@@ -32,10 +32,6 @@ static const CGFloat titleHeight = 50;
     [self addTitleView];
 }
 
-- (CGFloat)cellHeight{
-    return self.component.cellHeight + titleHeight;
-}
-
 - (void)addTitleView{
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.text = @"添加一个title视图";

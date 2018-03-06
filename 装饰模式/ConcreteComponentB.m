@@ -24,8 +24,4 @@
     NSLog(@"this is B Component");
 }
 
-- (CGFloat)cellHeight{
-    return 109;
-}
-
 @end

@@ -80,7 +80,7 @@
         ConcreteDecoratorA *decoratorA = [tableView dequeueReusableCellWithIdentifier:@"DecoratorA"];
         if (!decoratorA) {
             ConcreteComponentB *componentB = [[ConcreteComponentB alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-            decoratorA = [[ConcreteDecoratorA alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DecoratorB"];
+            decoratorA = [[ConcreteDecoratorA alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DecoratorA"];
             decoratorA.component = componentB;
         }
         

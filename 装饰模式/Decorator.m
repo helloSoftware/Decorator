@@ -32,8 +32,5 @@
     [self.contentView addSubview:cell];
 }
 
-- (CGFloat)cellHeight{
-    return self.component.cellHeight;
-}
 
 @end
